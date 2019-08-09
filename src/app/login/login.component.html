@@ -1,1 +1,27 @@
-<p>login works!</p>
+<div *ngIf="(user | async) || {} as user">
+  <div *ngIf="!user.uid;">
+    <!-- 認証されていない場合 -->
+    <div>
+      <button (click)="loginWithGoogle()">Login With Google</button>
+    </div>
+    <div>
+      <input type="email" [(ngModel)]="email" placeholder="email">
+      <input type="password" [(ngModel)]="password" placeholder="password">
+      <button (click)="loginWithEmailAndPassword()">Login With Email</button>
+    </div>
+    <div>
+      <button (click)="loginAnonymously()">Login Anonymously</button>
+    </div>
+  </div>
+
+  <div *ngIf="user.isAnonymous">
+    <!-- 匿名ユーザーの場合 -->
+    <button (click)="upgradeAnonymouosWithGoogle()">Google認証に更新</button>
+  </div>
+
+  <div *ngIf="user.uid">
+    <!-- 認証されている場合 -->
+    <p>すでにログインしています。uid: {{user.uid}}</p>
+    <button (click)="logout()">ログアウト</button>
+  </div>
+</div>

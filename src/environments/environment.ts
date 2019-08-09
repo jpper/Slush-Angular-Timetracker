@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: "AIzaSyDvUVnWuJaxhRestWX7Gb0G5p8vyBx45uI",
+    authDomain: "slush-timetracker.firebaseapp.com",
+    databaseURL: "https://slush-timetracker.firebaseio.com",
+    projectId: "slush-timetracker",
+    storageBucket: "",
+    messagingSenderId: "555310955792",
+    appId: "1:555310955792:web:c56016e308dde933"
+  }
 };
 
 /*
