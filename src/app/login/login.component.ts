@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import * as firebase from 'firebase/app';
 import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 // import 'hammerjs';
 @Component({
   selector: 'app-login',
@@ -14,7 +15,10 @@ export class LoginComponent implements OnInit {
   email: string;
   password: string;
 
-  constructor(private angularFireAuth: AngularFireAuth) { }
+  constructor(
+    private angularFireAuth: AngularFireAuth,
+    private router: Router,
+    ) { }
 
   ngOnInit() {
     // 認証状態の変更を監視しておく
@@ -31,6 +35,8 @@ export class LoginComponent implements OnInit {
   async loginWithGoogle() {
     const provider = new firebase.auth.GoogleAuthProvider();
     const credential = await this.angularFireAuth.auth.signInWithPopup(provider);
+    console.log("In google login function");
+    this.router.navigateByUrl('/home');
   }
 
   // 匿名認証
