@@ -1,6 +1,6 @@
 <nav>
   <div class="nav-wrapper">
-    <a href="home" class="brand-logo">Time Tracker</a>
+    <a href="home" class="brand-logo">Bark Worklogs</a>
     <ul id="nav-mobile" class="right hide-on-med-and-down">
       <div class="buttonlogout" style="text-align: right">
         <button type="button" class="btn btn-primary" (click)="logOut()">
@@ -12,37 +12,50 @@
 </nav>
 
 
-
-
-<div class="ti">
-  <div class="container">
-    <div class="row">
-      <div class="col s12 m3"></div>
-      <div class="col s12 m6">
-        <form>
-          <div class="input-field">
-            <input class="timepicker" type="text" id="time">
-            <label for="time">Start time</label>
-          </div>
-        </form>
+<h5 class="time">Pick Your Date!</h5>
+<div class="container">
+  <div class="row">
+    <div class="col s12 m3"></div>
+    <div class="col s12 m6">
+    <form>
+      <div class="input-field">
+        <input type="text" class="datepicker">
+        <label for="calendar">Pick Date</label>
       </div>
-      <div class="col s12 m3"></div>
+    </form>
     </div>
   </div>
+</div>
 
-  <div class="container">
-    <div class="row">
-      <div class="col s12 m3"></div>
-      <div class="col s12 m6">
-        <form>
-          <div class="input-field">
-            <input class="timepicker1" type="text" id="itime">
-            <label for="time">End time</label>
-          </div>
-        </form>
-      </div>
-      <div class="col s12 m3"></div>
+
+<h5 class="time">Pick Your Time!</h5>
+<div class="container">
+  <div class="row">
+    <div class="col s12 m3"></div>
+    <div class="col s12 m6">
+      <form>
+        <div class="input-field">
+          <input class="timepicker" type="text" id="time">
+          <label for="time">Start time</label>
+        </div>
+      </form>
     </div>
+    <div class="col s12 m3"></div>
   </div>
+</div>
 
+
+<div class="container">
+  <div class="row">
+    <div class="col s12 m3"></div>
+    <div class="col s12 m6">
+      <form>
+        <div class="input-field">
+          <input class="timepicker1" type="text" id="itime">
+          <label for="time">End time</label>
+        </div>
+      </form>
+    </div>
+    <div class="col s12 m3"></div>
+  </div>
 </div>

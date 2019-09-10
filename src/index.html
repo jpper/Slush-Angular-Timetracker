@@ -41,6 +41,23 @@
     });
   });
 
+  document.addEventListener('DOMContentLoaded', function() {
+    var Calendar = document.querySelectorAll('.datepicker');
+    var instances = M.Datepicker.init(Calendar,{
+      showClearBtn:true,
+      i18n:{
+        clear:"remove",
+        cancel:"No",
+        done: "Yes"
+      }
+    });
+  });
+
+
+
+
+
+
   </script>
 
 </body>
