@@ -19,44 +19,44 @@
                     <br />
                     <div class="form-field">
                         <button type="button" class="btn btn-primary" (click)="loginWithEmailAndPassword()">
-              Login With Email
-            </button>
+                            Login With Email
+                        </button>
                     </div>
                     <div class="format-button form-field">
                         <button type="button" class="btn btn-primary" (click)="loginAnonymously()">
-              Login Anonymously
-            </button>
+                            Login Anonymously
+                        </button>
                     </div>
                     <div *ngIf="user.isAnonymous">
                         <!-- 匿名ユーザーの場合 -->
                         <button (click)="upgradeAnonymouosWithGoogle()">
-              Google認証に更新
-            </button>
+                            Google認証に更新
+                        </button>
                     </div>
-                </div>
-                <div *ngIf="(user | async) || {} as user">
-                    <div *ngIf="!user.uid">
-                        <!-- 認証されていない場合 -->
+                    <div *ngIf="(user | async) || {} as user">
+                        <div *ngIf="!user.uid">
+                            <!-- 認証されていない場合 -->
 
-                        <div class="format-button">
-                            <button type="button" class="btn btn-primary" (click)="loginWithGoogle()">
-                Login With Google
-              </button>
+                            <div class="format-button">
+                                <button type="button" class="btn btn-primary" (click)="loginWithGoogle()">
+                                    Login With Google
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div *ngIf="user.uid">
+                <!-- 認証されている場合 -->
+                <p>すでにログインしています。uid: {{ user.uid }}</p>
+                <button (click)="logout()">ログアウト</button>
+            </div>
+
         </div>
-    </div>
+        <div>
+            Don't have an account yet? Please register
+            <a (click)="goToRegisterPage()">here</a>.
+        </div>
 
-    <div *ngIf="user.uid">
-        <!-- 認証されている場合 -->
-        <p>すでにログインしています。uid: {{ user.uid }}</p>
-        <button (click)="logout()">ログアウト</button>
-    </div>
-
-    <div>
-        Don't have an account yet? Please register
-        <a href="">here</a>.
     </div>
 </div>

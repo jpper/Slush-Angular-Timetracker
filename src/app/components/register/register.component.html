@@ -1,1 +1,32 @@
-<p>register works!</p>
+<div class="row format-form">
+    <div class="col s12 14 offset-14">
+        <div class="card">
+            <div class="card-action">
+                <h3>Register Form</h3>
+            </div>
+            <div class="card-content">
+                <div class="form-field">
+                    <input type="text" [(ngModel)]="username" placeholder="Your Name" />
+                </div>
+                <br />
+                <div class="form-field">
+                    <input type="email" [(ngModel)]="email" placeholder="email" />
+                </div>
+                <br />
+                <div class="form-field">
+                    <input type="password" [(ngModel)]="password" placeholder="password" />
+                </div>
+                <br />
+                <div class="form-field">
+                    <button type="button" class="btn btn-primary" (click)="registerWithEmail()">
+            Register
+          </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        Already have an account? Please log in
+        <a (click)="goToLoginPage()">here</a>.
+    </div>
+</div>

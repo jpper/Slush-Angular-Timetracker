@@ -3,7 +3,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import * as firebase from 'firebase/app';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
-// import 'hammerjs';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
   constructor(
     private angularFireAuth: AngularFireAuth,
     private router: Router,
-    ) { }
+  ) { }
 
   ngOnInit() {
     // 認証状態の変更を監視しておく
@@ -65,6 +65,10 @@ export class LoginComponent implements OnInit {
   async upgradeAnonymouosWithGoogle() {
     const provider = new firebase.auth.GoogleAuthProvider();
     const credential = await this.angularFireAuth.auth.currentUser.linkWithPopup(provider);
+  }
+
+  goToRegisterPage() {
+    this.router.navigateByUrl('register');
   }
 
 }
