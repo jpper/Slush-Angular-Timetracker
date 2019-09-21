@@ -1,0 +1,134 @@
+<nav>
+  <div class="nav-wrapper">
+    <a href="home" class="brand-logo">Bark Worklogs</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <div class="buttonlogout" style="text-align: right">
+        <button type="button" class="btn btn-primary waves-effect waves-light red" (click)="logOut()">
+          Log Out
+        </button>
+      </div>
+    </ul>
+  </div>
+</nav>
+
+
+<h5 class="time">Pick Your Date!</h5>
+<div class="container">
+  <div class="row">
+    <div class="col s6 m3"></div>
+    <div class="col s12 m6">
+      <form>
+        <div class="input-field col s6">
+          <input type="text" class="datepicker">
+          <label for="calendar">Pick Date</label>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="timing">
+  <h5 class="time1">Pick Your Time!</h5>
+  <div class="container1">
+    <div class="row">
+      <div class="col s12 m3"></div>
+      <div class="col s12 m6">
+        <form class="option1">
+          <div class="input-field col s6">
+            <input class="timepicker" type="text" id="time">
+            <label for="time">Start time</label>
+          </div>
+        </form>
+      </div>
+      <div class="col s12 m3"></div>
+    </div>
+  </div>
+
+
+
+
+  <div class="container2">
+    <div class="row">
+      <div class="col s12 m3"></div>
+      <div class="col s12 m6">
+        <form>
+          <div class="input-field col s6">
+            <input class="timepicker1" type="text" id="itime">
+            <label for="time">Break</label>
+          </div>
+        </form>
+      </div>
+      <div class="col s12 m3"></div>
+    </div>
+  </div>
+
+  <div class="container2">
+    <div class="row">
+      <div class="col s12 m3"></div>
+      <div class="col s12 m6">
+        <form>
+          <div class="input-field col s6">
+            <input class="timepicker1" type="text" id="itime">
+            <label for="time">End time</label>
+          </div>
+        </form>
+      </div>
+      <div class="col s12 m3"></div>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="third">
+  <h5 class="third-title">What have you done?</h5>
+  <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s12 thirdmessage">
+          <textarea id="textarea1" class="materialize-textarea"></textarea>
+          <label for="textarea1">What have you done?</label>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+
+
+<div class="buttonsubmit">
+  <button class="btn waves-effect waves-light red" type="submit" name="action">Submit
+    <i class="material-icons right">send</i>
+  </button>
+</div>
+
+
+
+<div class="row">
+  <div id="admin" class="col s12">
+    <div class="card material-table">
+      <div class="table-header">
+        <span class="table-title">Work History</span>
+        <div class="actions">
+          <a href="#add_users" class="modal-trigger waves-effect btn-flat nopadding"><i
+              class="material-icons">person_add</i></a>
+          <a href="#" class="search-toggle waves-effect btn-flat nopadding"><i class="material-icons">search</i></a>
+        </div>
+      </div>
+      <table id="datatable">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Start</th>
+            <th>Break</th>
+            <th>End</th>
+            <th>What did you do?</th>
+          </tr>
+        </thead>
+
+
+      </table>
+    </div>
+  </div>
+</div>
